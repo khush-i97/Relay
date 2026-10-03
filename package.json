@@ -8,6 +8,9 @@
     "build": "next build",
     "start": "next start",
     "test": "vitest run",
+    "test:integration": "node scripts/with-supabase-env.mjs",
+    "db:start": "supabase start",
+    "db:reset": "supabase db reset",
     "typecheck": "tsc --noEmit",
     "lint": "eslint . --max-warnings=0"
   },
