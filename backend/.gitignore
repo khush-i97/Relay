@@ -1,0 +1,12 @@
+.worktrees/
+tmp/
+node_modules/
+.next/
+coverage/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.supabase/
+supabase/.branches/
+supabase/.temp/
