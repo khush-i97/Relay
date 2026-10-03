@@ -13,7 +13,7 @@ import type {
   VisitResponse,
   WalletResponse,
 } from "@/lib/contracts";
-import type { BiteQuestApi } from "@/lib/client/types";
+import type { RelayApi } from "@/lib/client/types";
 
 async function readJson<T>(response: Response): Promise<T> {
   const text = await response.text();
@@ -63,7 +63,7 @@ function parseFrames(buffer: string, flush: boolean): { events: { event: string;
   return { events, rest: flush ? "" : rest };
 }
 
-export function createHttpApi(base = "/api/v1"): BiteQuestApi {
+export function createHttpApi(base = "/api/v1"): RelayApi {
   async function send<T>(path: string, init?: RequestInit): Promise<T> {
     let response: Response;
     try {

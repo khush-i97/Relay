@@ -31,9 +31,9 @@ import {
   VISIT_REWARD_CENTS,
   XP_PER_LEVEL,
 } from "@/lib/rules";
-import type { BiteQuestApi } from "@/lib/client/types";
+import type { RelayApi } from "@/lib/client/types";
 
-const STORAGE_KEY = "bitequest.demo.v1";
+const STORAGE_KEY = "relay.demo.v1";
 
 type Collected = { discoveredAt: string; xpAwarded: number };
 type Earn = { restaurantId: string; sfDate: string; visitId: string; amountCents: number };
@@ -465,7 +465,7 @@ async function streamAdventure(
   onEvent({ type: "complete", plan });
 }
 
-export const mockApi: BiteQuestApi = {
+export const mockApi: RelayApi = {
   async ensureSession() {
     return sessionFrom(state);
   },

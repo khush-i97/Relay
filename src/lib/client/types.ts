@@ -13,7 +13,7 @@ import type {
   CollectionResponse,
 } from "@/lib/contracts";
 
-export type BiteQuestApi = {
+export type RelayApi = {
   ensureSession(): Promise<SessionResponse>;
   getSummary(): Promise<Summary>;
   getNearby(query: NearbyQuery): Promise<NearbyResponse>;
