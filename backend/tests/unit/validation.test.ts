@@ -24,7 +24,8 @@ describe("request validation", () => {
   it("bounds nearby queries", () => {
     expect(nearbyQuerySchema.safeParse({ latitude: "37.7", longitude: "-122.4", radiusMeters: "100" }).success).toBe(true);
     expect(nearbyQuerySchema.safeParse({ latitude: "37.7", longitude: "-122.4", radiusMeters: "99" }).success).toBe(false);
-    expect(nearbyQuerySchema.safeParse({ latitude: "37.7", longitude: "-122.4", radiusMeters: "5001" }).success).toBe(false);
+    expect(nearbyQuerySchema.safeParse({ latitude: "37.7", longitude: "-122.4", radiusMeters: "10000" }).success).toBe(true);
+    expect(nearbyQuerySchema.safeParse({ latitude: "37.7", longitude: "-122.4", radiusMeters: "10001" }).success).toBe(false);
   });
 
   it("accepts only strict qualifying visit input", () => {

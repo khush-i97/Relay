@@ -1,20 +1,1602 @@
 [
-  {"id":"demo-mission-taco","name":"Mission Comet Tacos","cuisine":"Mexican","latitude":37.7599,"longitude":-122.4148,"rarity":"common","discoveryXp":150,"rewardCents":50,"estimatedMealCents":1400,"tags":["tacos","spicy","casual"],"description":"Bright street-style tacos with seasonal salsas.","imageUrl":null,"availability":"open","isSynthetic":true},
-  {"id":"demo-sunset-ramen","name":"Sunset Nebula Ramen","cuisine":"Japanese","latitude":37.7635,"longitude":-122.4662,"rarity":"rare","discoveryXp":400,"rewardCents":50,"estimatedMealCents":1900,"tags":["ramen","noodles","cozy"],"description":"Slow-simmered broths and handmade noodles in the Sunset.","imageUrl":null,"availability":"open","isSynthetic":true},
-  {"id":"demo-embarcadero-bites","name":"Embarcadero Orbit Bites","cuisine":"Californian","latitude":37.7955,"longitude":-122.3937,"rarity":"epic","discoveryXp":800,"rewardCents":50,"estimatedMealCents":2500,"tags":["waterfront","seasonal","seafood"],"description":"A compact waterfront menu built around California produce.","imageUrl":null,"availability":"open","isSynthetic":true},
-  {"id":"demo-richmond-dumpling","name":"Richmond Meteor Dumplings","cuisine":"Chinese","latitude":37.7809,"longitude":-122.4660,"rarity":"common","discoveryXp":150,"rewardCents":50,"estimatedMealCents":1600,"tags":["dumplings","shared","casual"],"description":"Hand-folded dumplings served in generous shareable baskets.","imageUrl":null,"availability":"open","isSynthetic":true},
-  {"id":"demo-noe-pasta","name":"Noe Valley Moon Pasta","cuisine":"Italian","latitude":37.7504,"longitude":-122.4337,"rarity":"rare","discoveryXp":400,"rewardCents":50,"estimatedMealCents":2300,"tags":["pasta","date-night","vegetarian"],"description":"Fresh pasta and garden vegetables in a neighborhood room.","imageUrl":null,"availability":"open","isSynthetic":true},
-  {"id":"demo-soma-curry","name":"SoMa Signal Curry","cuisine":"Indian","latitude":37.7782,"longitude":-122.4003,"rarity":"common","discoveryXp":150,"rewardCents":50,"estimatedMealCents":1700,"tags":["curry","spicy","vegan"],"description":"Fast regional curries with rotating rice and chutney pairings.","imageUrl":null,"availability":"open","isSynthetic":true},
-  {"id":"demo-marina-mezze","name":"Marina Star Mezze","cuisine":"Mediterranean","latitude":37.8013,"longitude":-122.4380,"rarity":"rare","discoveryXp":400,"rewardCents":50,"estimatedMealCents":2200,"tags":["mezze","shared","vegetarian"],"description":"Colorful small plates inspired by the eastern Mediterranean.","imageUrl":null,"availability":"open","isSynthetic":true},
-  {"id":"demo-castro-bakery","name":"Castro Cosmic Bakery","cuisine":"Bakery","latitude":37.7609,"longitude":-122.4350,"rarity":"common","discoveryXp":150,"rewardCents":50,"estimatedMealCents":1100,"tags":["pastry","coffee","breakfast"],"description":"Original pastries, breakfast buns, and carefully brewed coffee.","imageUrl":null,"availability":"open","isSynthetic":true},
-  {"id":"demo-chinatown-tea","name":"Chinatown Lunar Tea Room","cuisine":"Tea House","latitude":37.7941,"longitude":-122.4078,"rarity":"legendary","discoveryXp":1200,"rewardCents":50,"estimatedMealCents":2800,"tags":["tea","dim-sum","quiet"],"description":"A ceremonial tea room with a concise handmade snack menu.","imageUrl":null,"availability":"open","isSynthetic":true},
-  {"id":"demo-haight-bowls","name":"Haight Aurora Bowls","cuisine":"Californian","latitude":37.7694,"longitude":-122.4481,"rarity":"common","discoveryXp":150,"rewardCents":50,"estimatedMealCents":1500,"tags":["healthy","vegan","bowls"],"description":"Produce-forward grain bowls with bold house dressings.","imageUrl":null,"availability":"open","isSynthetic":true},
-  {"id":"demo-potrero-bbq","name":"Potrero Rocket BBQ","cuisine":"Barbecue","latitude":37.7561,"longitude":-122.4011,"rarity":"epic","discoveryXp":800,"rewardCents":50,"estimatedMealCents":2600,"tags":["barbecue","hearty","shared"],"description":"Wood-smoked plates and bright pickles with skyline views.","imageUrl":null,"availability":"open","isSynthetic":true},
-  {"id":"demo-northbeach-pizza","name":"North Beach Planet Pizza","cuisine":"Italian","latitude":37.8002,"longitude":-122.4091,"rarity":"common","discoveryXp":150,"rewardCents":50,"estimatedMealCents":1800,"tags":["pizza","family","casual"],"description":"Thin, blistered pies with classic and seasonal toppings.","imageUrl":null,"availability":"open","isSynthetic":true},
-  {"id":"demo-dogpatch-korean","name":"Dogpatch Nova Kitchen","cuisine":"Korean","latitude":37.7587,"longitude":-122.3885,"rarity":"rare","discoveryXp":400,"rewardCents":50,"estimatedMealCents":2100,"tags":["korean","grill","spicy"],"description":"Korean comfort dishes with a compact charcoal-grilled menu.","imageUrl":null,"availability":"open","isSynthetic":true},
-  {"id":"demo-presidio-picnic","name":"Presidio Pathfinder Picnic","cuisine":"Sandwiches","latitude":37.7910,"longitude":-122.4555,"rarity":"epic","discoveryXp":800,"rewardCents":50,"estimatedMealCents":1750,"tags":["picnic","sandwiches","outdoors"],"description":"Packable sandwiches and salads designed for park wandering.","imageUrl":null,"availability":"open","isSynthetic":true},
-  {"id":"demo-tenderloin-pho","name":"Tenderloin Satellite Pho","cuisine":"Vietnamese","latitude":37.7834,"longitude":-122.4142,"rarity":"common","discoveryXp":150,"rewardCents":50,"estimatedMealCents":1550,"tags":["pho","noodles","comfort"],"description":"Aromatic noodle soups and crisp herb-filled rolls.","imageUrl":null,"availability":"open","isSynthetic":true},
-  {"id":"demo-bernal-brunch","name":"Bernal Solstice Brunch","cuisine":"Brunch","latitude":37.7420,"longitude":-122.4148,"rarity":"rare","discoveryXp":400,"rewardCents":50,"estimatedMealCents":2000,"tags":["brunch","coffee","family"],"description":"Sunny breakfast plates with house breads and preserves.","imageUrl":null,"availability":"open","isSynthetic":true},
-  {"id":"demo-japantown-sushi","name":"Japantown Stardust Sushi","cuisine":"Japanese","latitude":37.7855,"longitude":-122.4298,"rarity":"legendary","discoveryXp":1200,"rewardCents":50,"estimatedMealCents":3200,"tags":["sushi","special-occasion","seafood"],"description":"A concise chef-selected sushi experience using seasonal fish.","imageUrl":null,"availability":"open","isSynthetic":true},
-  {"id":"demo-excelsior-pupusa","name":"Excelsior Eclipse Pupusas","cuisine":"Salvadoran","latitude":37.7248,"longitude":-122.4342,"rarity":"common","discoveryXp":150,"rewardCents":50,"estimatedMealCents":1250,"tags":["pupusas","casual","family"],"description":"Griddled pupusas with bright curtido and house salsas.","imageUrl":null,"availability":"open","isSynthetic":true}
+  {
+    "id": "demo-mission-taco",
+    "name": "Mission Comet Tacos",
+    "cuisine": "Mexican",
+    "latitude": 37.7599,
+    "longitude": -122.4148,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1400,
+    "tags": [
+      "tacos",
+      "spicy",
+      "casual"
+    ],
+    "description": "Bright street-style tacos with seasonal salsas.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-sunset-ramen",
+    "name": "Sunset Nebula Ramen",
+    "cuisine": "Japanese",
+    "latitude": 37.7635,
+    "longitude": -122.4662,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 1900,
+    "tags": [
+      "ramen",
+      "noodles",
+      "cozy"
+    ],
+    "description": "Slow-simmered broths and handmade noodles in the Sunset.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-embarcadero-bites",
+    "name": "Embarcadero Orbit Bites",
+    "cuisine": "Californian",
+    "latitude": 37.7955,
+    "longitude": -122.3937,
+    "rarity": "epic",
+    "discoveryXp": 800,
+    "rewardCents": 50,
+    "estimatedMealCents": 2500,
+    "tags": [
+      "waterfront",
+      "seasonal",
+      "seafood"
+    ],
+    "description": "A compact waterfront menu built around California produce.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-richmond-dumpling",
+    "name": "Richmond Meteor Dumplings",
+    "cuisine": "Chinese",
+    "latitude": 37.7809,
+    "longitude": -122.466,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1600,
+    "tags": [
+      "dumplings",
+      "shared",
+      "casual"
+    ],
+    "description": "Hand-folded dumplings served in generous shareable baskets.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-noe-pasta",
+    "name": "Noe Valley Moon Pasta",
+    "cuisine": "Italian",
+    "latitude": 37.7504,
+    "longitude": -122.4337,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 2300,
+    "tags": [
+      "pasta",
+      "date-night",
+      "vegetarian"
+    ],
+    "description": "Fresh pasta and garden vegetables in a neighborhood room.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-soma-curry",
+    "name": "SoMa Signal Curry",
+    "cuisine": "Indian",
+    "latitude": 37.7782,
+    "longitude": -122.4003,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1700,
+    "tags": [
+      "curry",
+      "spicy",
+      "vegan"
+    ],
+    "description": "Fast regional curries with rotating rice and chutney pairings.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-marina-mezze",
+    "name": "Marina Star Mezze",
+    "cuisine": "Mediterranean",
+    "latitude": 37.8013,
+    "longitude": -122.438,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 2200,
+    "tags": [
+      "mezze",
+      "shared",
+      "vegetarian"
+    ],
+    "description": "Colorful small plates inspired by the eastern Mediterranean.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-castro-bakery",
+    "name": "Castro Cosmic Bakery",
+    "cuisine": "Bakery",
+    "latitude": 37.7609,
+    "longitude": -122.435,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1100,
+    "tags": [
+      "pastry",
+      "coffee",
+      "breakfast"
+    ],
+    "description": "Original pastries, breakfast buns, and carefully brewed coffee.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-chinatown-tea",
+    "name": "Chinatown Lunar Tea Room",
+    "cuisine": "Tea House",
+    "latitude": 37.7941,
+    "longitude": -122.4078,
+    "rarity": "legendary",
+    "discoveryXp": 1200,
+    "rewardCents": 50,
+    "estimatedMealCents": 2800,
+    "tags": [
+      "tea",
+      "dim-sum",
+      "quiet"
+    ],
+    "description": "A ceremonial tea room with a concise handmade snack menu.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-haight-bowls",
+    "name": "Haight Aurora Bowls",
+    "cuisine": "Californian",
+    "latitude": 37.7694,
+    "longitude": -122.4481,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1500,
+    "tags": [
+      "healthy",
+      "vegan",
+      "bowls"
+    ],
+    "description": "Produce-forward grain bowls with bold house dressings.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-potrero-bbq",
+    "name": "Potrero Rocket BBQ",
+    "cuisine": "Barbecue",
+    "latitude": 37.7561,
+    "longitude": -122.4011,
+    "rarity": "epic",
+    "discoveryXp": 800,
+    "rewardCents": 50,
+    "estimatedMealCents": 2600,
+    "tags": [
+      "barbecue",
+      "hearty",
+      "shared"
+    ],
+    "description": "Wood-smoked plates and bright pickles with skyline views.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-northbeach-pizza",
+    "name": "North Beach Planet Pizza",
+    "cuisine": "Italian",
+    "latitude": 37.8002,
+    "longitude": -122.4091,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1800,
+    "tags": [
+      "pizza",
+      "family",
+      "casual"
+    ],
+    "description": "Thin, blistered pies with classic and seasonal toppings.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-dogpatch-korean",
+    "name": "Dogpatch Nova Kitchen",
+    "cuisine": "Korean",
+    "latitude": 37.7587,
+    "longitude": -122.3885,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 2100,
+    "tags": [
+      "korean",
+      "grill",
+      "spicy"
+    ],
+    "description": "Korean comfort dishes with a compact charcoal-grilled menu.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-presidio-picnic",
+    "name": "Presidio Pathfinder Picnic",
+    "cuisine": "Sandwiches",
+    "latitude": 37.791,
+    "longitude": -122.4555,
+    "rarity": "epic",
+    "discoveryXp": 800,
+    "rewardCents": 50,
+    "estimatedMealCents": 1750,
+    "tags": [
+      "picnic",
+      "sandwiches",
+      "outdoors"
+    ],
+    "description": "Packable sandwiches and salads designed for park wandering.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-tenderloin-pho",
+    "name": "Tenderloin Satellite Pho",
+    "cuisine": "Vietnamese",
+    "latitude": 37.7834,
+    "longitude": -122.4142,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1550,
+    "tags": [
+      "pho",
+      "noodles",
+      "comfort"
+    ],
+    "description": "Aromatic noodle soups and crisp herb-filled rolls.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-bernal-brunch",
+    "name": "Bernal Solstice Brunch",
+    "cuisine": "Brunch",
+    "latitude": 37.742,
+    "longitude": -122.4148,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 2000,
+    "tags": [
+      "brunch",
+      "coffee",
+      "family"
+    ],
+    "description": "Sunny breakfast plates with house breads and preserves.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-japantown-sushi",
+    "name": "Japantown Stardust Sushi",
+    "cuisine": "Japanese",
+    "latitude": 37.7855,
+    "longitude": -122.4298,
+    "rarity": "legendary",
+    "discoveryXp": 1200,
+    "rewardCents": 50,
+    "estimatedMealCents": 3200,
+    "tags": [
+      "sushi",
+      "special-occasion",
+      "seafood"
+    ],
+    "description": "A concise chef-selected sushi experience using seasonal fish.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-excelsior-pupusa",
+    "name": "Excelsior Eclipse Pupusas",
+    "cuisine": "Salvadoran",
+    "latitude": 37.7248,
+    "longitude": -122.4342,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1250,
+    "tags": [
+      "pupusas",
+      "casual",
+      "family"
+    ],
+    "description": "Griddled pupusas with bright curtido and house salsas.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-valencia-tortas",
+    "name": "Valencia Quasar Tortas",
+    "cuisine": "Mexican",
+    "latitude": 37.7617,
+    "longitude": -122.4216,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1300,
+    "tags": [
+      "sandwiches",
+      "spicy",
+      "casual"
+    ],
+    "description": "Pressed tortas stacked with slow-braised meats and pickled jalapeños.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-24th-mole",
+    "name": "24th Street Gravity Mole",
+    "cuisine": "Mexican",
+    "latitude": 37.7525,
+    "longitude": -122.415,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 2200,
+    "tags": [
+      "mole",
+      "family",
+      "date-night"
+    ],
+    "description": "Seven-mole tasting plates with handmade blue corn tortillas.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-inner-mission-churros",
+    "name": "Inner Mission Comet Churros",
+    "cuisine": "Dessert",
+    "latitude": 37.765,
+    "longitude": -122.419,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 800,
+    "tags": [
+      "dessert",
+      "sweet",
+      "late-night"
+    ],
+    "description": "Crisp cinnamon churros with dark chocolate and cajeta dips.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-hayes-wine-bar",
+    "name": "Hayes Valley Halo Small Plates",
+    "cuisine": "Californian",
+    "latitude": 37.7765,
+    "longitude": -122.4241,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 3400,
+    "tags": [
+      "date-night",
+      "wine",
+      "seasonal"
+    ],
+    "description": "Market small plates and natural wine in a candlelit room.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-hayes-ice-cream",
+    "name": "Hayes Orbit Creamery",
+    "cuisine": "Dessert",
+    "latitude": 37.776,
+    "longitude": -122.4255,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 700,
+    "tags": [
+      "ice-cream",
+      "sweet",
+      "family"
+    ],
+    "description": "Small-batch ice cream with rotating local fruit flavors.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-lower-haight-falafel",
+    "name": "Lower Haight Pulsar Falafel",
+    "cuisine": "Middle Eastern",
+    "latitude": 37.7717,
+    "longitude": -122.431,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1200,
+    "tags": [
+      "falafel",
+      "vegan",
+      "quick"
+    ],
+    "description": "Herb-green falafel wraps with tahini and pickled turnips.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-cole-valley-cafe",
+    "name": "Cole Valley Corona Cafe",
+    "cuisine": "Cafe",
+    "latitude": 37.7656,
+    "longitude": -122.45,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1000,
+    "tags": [
+      "coffee",
+      "breakfast",
+      "cozy"
+    ],
+    "description": "Neighborhood espresso bar with cardamom buns and toast.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-inner-sunset-udon",
+    "name": "Inner Sunset Nebula Udon",
+    "cuisine": "Japanese",
+    "latitude": 37.7639,
+    "longitude": -122.4687,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 1800,
+    "tags": [
+      "noodles",
+      "udon",
+      "comfort"
+    ],
+    "description": "Thick hand-pulled udon in dashi with crisp tempura.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-outer-sunset-surf",
+    "name": "Outer Sunset Tide Tacos",
+    "cuisine": "Mexican",
+    "latitude": 37.753,
+    "longitude": -122.495,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1400,
+    "tags": [
+      "fish-tacos",
+      "seafood",
+      "beach"
+    ],
+    "description": "Beer-battered fish tacos for after a foggy surf session.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-outer-sunset-coffee",
+    "name": "Outer Sunset Fogline Roasters",
+    "cuisine": "Cafe",
+    "latitude": 37.76,
+    "longitude": -122.494,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 900,
+    "tags": [
+      "coffee",
+      "pastry",
+      "beach"
+    ],
+    "description": "Single-origin pour-overs and morning buns near the ocean.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-parkside-dim-sum",
+    "name": "Parkside Lantern Dim Sum",
+    "cuisine": "Chinese",
+    "latitude": 37.742,
+    "longitude": -122.488,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 2100,
+    "tags": [
+      "dim-sum",
+      "shared",
+      "family"
+    ],
+    "description": "Steaming carts of har gow, siu mai, and egg tarts.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-west-portal-trattoria",
+    "name": "West Portal Polaris Trattoria",
+    "cuisine": "Italian",
+    "latitude": 37.7405,
+    "longitude": -122.466,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 2400,
+    "tags": [
+      "pasta",
+      "family",
+      "cozy"
+    ],
+    "description": "Old-school red-sauce trattoria with garlic bread towers.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-clement-hotpot",
+    "name": "Clement Street Supernova Hot Pot",
+    "cuisine": "Chinese",
+    "latitude": 37.7828,
+    "longitude": -122.46,
+    "rarity": "epic",
+    "discoveryXp": 800,
+    "rewardCents": 50,
+    "estimatedMealCents": 3200,
+    "tags": [
+      "hot-pot",
+      "spicy",
+      "shared"
+    ],
+    "description": "Bubbling Sichuan hot pot with numbing mala broth.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-clement-burmese",
+    "name": "Clement Eclipse Burmese Kitchen",
+    "cuisine": "Burmese",
+    "latitude": 37.783,
+    "longitude": -122.4625,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 2300,
+    "tags": [
+      "tea-leaf-salad",
+      "spicy",
+      "shared"
+    ],
+    "description": "Tea leaf salad, garlic noodles, and coconut chicken curry.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-outer-richmond-pho",
+    "name": "Outer Richmond Starlight Pho",
+    "cuisine": "Vietnamese",
+    "latitude": 37.778,
+    "longitude": -122.493,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1500,
+    "tags": [
+      "pho",
+      "noodles",
+      "comfort"
+    ],
+    "description": "Rich beef pho and lemongrass grilled pork vermicelli.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-geary-korean-bbq",
+    "name": "Geary Boulevard Meteor BBQ",
+    "cuisine": "Korean",
+    "latitude": 37.781,
+    "longitude": -122.472,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 3500,
+    "tags": [
+      "korean-bbq",
+      "grill",
+      "shared"
+    ],
+    "description": "Tabletop grills with marinated galbi and endless banchan.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-fillmore-jazz-soul",
+    "name": "Fillmore Jazz Satellite Soul Food",
+    "cuisine": "Southern",
+    "latitude": 37.784,
+    "longitude": -122.433,
+    "rarity": "epic",
+    "discoveryXp": 800,
+    "rewardCents": 50,
+    "estimatedMealCents": 2600,
+    "tags": [
+      "fried-chicken",
+      "comfort",
+      "live-music"
+    ],
+    "description": "Fried chicken and waffles with a live jazz soundtrack.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-pac-heights-brunch",
+    "name": "Pacific Heights Zenith Brunch",
+    "cuisine": "Brunch",
+    "latitude": 37.792,
+    "longitude": -122.435,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 2500,
+    "tags": [
+      "brunch",
+      "eggs",
+      "coffee"
+    ],
+    "description": "Soufflé pancakes and herby egg plates with bay views.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-cow-hollow-oysters",
+    "name": "Cow Hollow Comet Oyster Bar",
+    "cuisine": "Seafood",
+    "latitude": 37.7975,
+    "longitude": -122.436,
+    "rarity": "epic",
+    "discoveryXp": 800,
+    "rewardCents": 50,
+    "estimatedMealCents": 3800,
+    "tags": [
+      "oysters",
+      "seafood",
+      "date-night"
+    ],
+    "description": "Chilled oysters, crudo, and crisp white wine.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-russian-hill-crepes",
+    "name": "Russian Hill Cosmos Crêperie",
+    "cuisine": "French",
+    "latitude": 37.801,
+    "longitude": -122.419,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1400,
+    "tags": [
+      "crepes",
+      "sweet",
+      "breakfast"
+    ],
+    "description": "Buckwheat galettes and Nutella crêpes folded to order.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-nob-hill-steak",
+    "name": "Nob Hill Orion Steakhouse",
+    "cuisine": "Steakhouse",
+    "latitude": 37.792,
+    "longitude": -122.415,
+    "rarity": "legendary",
+    "discoveryXp": 1200,
+    "rewardCents": 50,
+    "estimatedMealCents": 6800,
+    "tags": [
+      "steak",
+      "special-occasion",
+      "fancy"
+    ],
+    "description": "Dry-aged steaks and tableside Caesar under chandeliers.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-polk-thai",
+    "name": "Polk Gulch Rocket Thai",
+    "cuisine": "Thai",
+    "latitude": 37.788,
+    "longitude": -122.4205,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1600,
+    "tags": [
+      "thai",
+      "spicy",
+      "noodles"
+    ],
+    "description": "Fiery pad kee mao and jungle curry, open late.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-polk-ramen",
+    "name": "Polk Street Black Hole Ramen",
+    "cuisine": "Japanese",
+    "latitude": 37.7895,
+    "longitude": -122.421,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 1900,
+    "tags": [
+      "ramen",
+      "noodles",
+      "spicy"
+    ],
+    "description": "Black garlic tonkotsu ramen with a molten egg.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-union-square-bistro",
+    "name": "Union Square Constellation Bistro",
+    "cuisine": "French",
+    "latitude": 37.788,
+    "longitude": -122.4075,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 3600,
+    "tags": [
+      "bistro",
+      "date-night",
+      "wine"
+    ],
+    "description": "Steak frites and onion soup in a brass-railed bistro.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-fidi-salad",
+    "name": "FiDi Lightspeed Salads",
+    "cuisine": "Californian",
+    "latitude": 37.794,
+    "longitude": -122.399,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1400,
+    "tags": [
+      "healthy",
+      "vegan",
+      "quick"
+    ],
+    "description": "Build-your-own grain salads for a fast workday lunch.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-ferry-oysters",
+    "name": "Ferry Dock Lunar Fish Market",
+    "cuisine": "Seafood",
+    "latitude": 37.793,
+    "longitude": -122.396,
+    "rarity": "epic",
+    "discoveryXp": 800,
+    "rewardCents": 50,
+    "estimatedMealCents": 3000,
+    "tags": [
+      "seafood",
+      "waterfront",
+      "chowder"
+    ],
+    "description": "Sourdough bread bowls of clam chowder by the water.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-soma-burgers",
+    "name": "SoMa Thrust Burgers",
+    "cuisine": "American",
+    "latitude": 37.776,
+    "longitude": -122.41,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1500,
+    "tags": [
+      "burgers",
+      "fries",
+      "casual"
+    ],
+    "description": "Smash burgers, crinkle fries, and thick milkshakes.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-south-park-sandwich",
+    "name": "South Park Apogee Deli",
+    "cuisine": "Sandwiches",
+    "latitude": 37.7815,
+    "longitude": -122.394,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1300,
+    "tags": [
+      "sandwiches",
+      "quick",
+      "picnic"
+    ],
+    "description": "Overstuffed deli sandwiches to eat in the little oval park.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-mission-bay-poke",
+    "name": "Mission Bay Tidal Poke",
+    "cuisine": "Hawaiian",
+    "latitude": 37.77,
+    "longitude": -122.392,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1600,
+    "tags": [
+      "poke",
+      "seafood",
+      "healthy"
+    ],
+    "description": "Ahi poke bowls with furikake and mango salsa.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-dogpatch-brewery",
+    "name": "Dogpatch Booster Beer Hall",
+    "cuisine": "American",
+    "latitude": 37.761,
+    "longitude": -122.39,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 2200,
+    "tags": [
+      "beer",
+      "pretzels",
+      "shared"
+    ],
+    "description": "House lagers with giant pretzels and beer-cheese dip.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-dogpatch-chocolate",
+    "name": "Dogpatch Dark Matter Chocolate",
+    "cuisine": "Dessert",
+    "latitude": 37.757,
+    "longitude": -122.3895,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 900,
+    "tags": [
+      "chocolate",
+      "dessert",
+      "sweet"
+    ],
+    "description": "Bean-to-bar chocolate tasting flights and hot cocoa.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-bayview-bbq",
+    "name": "Bayview Afterburner Smokehouse",
+    "cuisine": "Barbecue",
+    "latitude": 37.73,
+    "longitude": -122.39,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 2400,
+    "tags": [
+      "barbecue",
+      "hearty",
+      "spicy"
+    ],
+    "description": "Hot links, brisket, and peach cobbler from a backyard pit.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-bernal-pizza",
+    "name": "Bernal Heights Retrograde Pizza",
+    "cuisine": "Pizza",
+    "latitude": 37.739,
+    "longitude": -122.418,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1900,
+    "tags": [
+      "pizza",
+      "family",
+      "casual"
+    ],
+    "description": "Detroit-style square pies with crispy cheese edges.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-glen-park-cafe",
+    "name": "Glen Park Canyon Cafe",
+    "cuisine": "Cafe",
+    "latitude": 37.734,
+    "longitude": -122.433,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1100,
+    "tags": [
+      "coffee",
+      "breakfast",
+      "outdoors"
+    ],
+    "description": "Breakfast sandwiches to take on the canyon trail.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-noe-bagels",
+    "name": "Noe Valley Eclipse Bagels",
+    "cuisine": "Bakery",
+    "latitude": 37.751,
+    "longitude": -122.431,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1000,
+    "tags": [
+      "bagels",
+      "breakfast",
+      "coffee"
+    ],
+    "description": "Wood-fired bagels with lox and scallion schmear.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-castro-thai",
+    "name": "Castro Star Thai Noodle",
+    "cuisine": "Thai",
+    "latitude": 37.7625,
+    "longitude": -122.4348,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1500,
+    "tags": [
+      "thai",
+      "noodles",
+      "vegan"
+    ],
+    "description": "Boat noodle soup and crispy tofu pad see ew.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-duboce-gelato",
+    "name": "Duboce Park Galactic Gelato",
+    "cuisine": "Dessert",
+    "latitude": 37.7695,
+    "longitude": -122.433,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 700,
+    "tags": [
+      "gelato",
+      "sweet",
+      "family"
+    ],
+    "description": "Pistachio and stracciatella gelato made each morning.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-nopa-farm",
+    "name": "NoPa Equinox Farm Table",
+    "cuisine": "Californian",
+    "latitude": 37.775,
+    "longitude": -122.44,
+    "rarity": "legendary",
+    "discoveryXp": 1200,
+    "rewardCents": 50,
+    "estimatedMealCents": 5200,
+    "tags": [
+      "seasonal",
+      "wood-fired",
+      "special-occasion"
+    ],
+    "description": "Wood-fired farm-to-table plates, booked weeks ahead.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-western-addition-ethiopian",
+    "name": "Western Addition Horizon Ethiopian",
+    "cuisine": "Ethiopian",
+    "latitude": 37.781,
+    "longitude": -122.428,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 2000,
+    "tags": [
+      "injera",
+      "shared",
+      "vegan"
+    ],
+    "description": "Colorful injera platters of lentil wats and greens.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-tenderloin-banh-mi",
+    "name": "Tenderloin Rocketship Bánh Mì",
+    "cuisine": "Vietnamese",
+    "latitude": 37.785,
+    "longitude": -122.417,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 900,
+    "tags": [
+      "sandwiches",
+      "quick",
+      "spicy"
+    ],
+    "description": "Crackly baguette bánh mì with lemongrass pork.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-tenderloin-yemeni",
+    "name": "Tenderloin Desert Star Yemeni",
+    "cuisine": "Middle Eastern",
+    "latitude": 37.784,
+    "longitude": -122.413,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 1700,
+    "tags": [
+      "lamb",
+      "spicy",
+      "shared"
+    ],
+    "description": "Slow-roasted lamb haneeth and fluffy malawah bread.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-chinatown-bakery",
+    "name": "Chinatown Jade Moon Bakery",
+    "cuisine": "Bakery",
+    "latitude": 37.795,
+    "longitude": -122.406,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 600,
+    "tags": [
+      "egg-tarts",
+      "pastry",
+      "sweet"
+    ],
+    "description": "Warm egg tarts and pineapple buns straight from the oven.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-chinatown-noodles",
+    "name": "Chinatown Dragon Comet Noodles",
+    "cuisine": "Chinese",
+    "latitude": 37.7962,
+    "longitude": -122.4072,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 1400,
+    "tags": [
+      "noodles",
+      "hand-pulled",
+      "spicy"
+    ],
+    "description": "Hand-pulled biang biang noodles with chili oil.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-north-beach-espresso",
+    "name": "North Beach Starlight Espresso",
+    "cuisine": "Cafe",
+    "latitude": 37.799,
+    "longitude": -122.407,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 800,
+    "tags": [
+      "coffee",
+      "pastry",
+      "historic"
+    ],
+    "description": "Beatnik-era espresso bar with tiramisu by the slice.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-north-beach-focaccia",
+    "name": "North Beach Telescope Focaccia",
+    "cuisine": "Bakery",
+    "latitude": 37.8008,
+    "longitude": -122.4105,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 900,
+    "tags": [
+      "focaccia",
+      "pizza",
+      "historic"
+    ],
+    "description": "Old-world focaccia slabs that sell out by noon.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-telegraph-hill-wine",
+    "name": "Telegraph Hill Skyline Enoteca",
+    "cuisine": "Italian",
+    "latitude": 37.802,
+    "longitude": -122.406,
+    "rarity": "epic",
+    "discoveryXp": 800,
+    "rewardCents": 50,
+    "estimatedMealCents": 4200,
+    "tags": [
+      "wine",
+      "pasta",
+      "date-night"
+    ],
+    "description": "Hillside enoteca with hand-cut pasta and city lights.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-wharf-crab",
+    "name": "Fisherman's Wharf Crab Constellation",
+    "cuisine": "Seafood",
+    "latitude": 37.808,
+    "longitude": -122.417,
+    "rarity": "epic",
+    "discoveryXp": 800,
+    "rewardCents": 50,
+    "estimatedMealCents": 3400,
+    "tags": [
+      "crab",
+      "seafood",
+      "waterfront"
+    ],
+    "description": "Whole Dungeness crab cracked fresh at the counter.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-embarcadero-dumplings",
+    "name": "Embarcadero Pier Pulsar Dumplings",
+    "cuisine": "Chinese",
+    "latitude": 37.803,
+    "longitude": -122.402,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1500,
+    "tags": [
+      "dumplings",
+      "soup-dumplings",
+      "waterfront"
+    ],
+    "description": "Xiao long bao with ginger vinegar by the piers.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-potrero-pupuseria",
+    "name": "Potrero Hill Nova Pupuseria",
+    "cuisine": "Salvadoran",
+    "latitude": 37.759,
+    "longitude": -122.4,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1200,
+    "tags": [
+      "pupusas",
+      "casual",
+      "family"
+    ],
+    "description": "Loroco-and-cheese pupusas with tangy curtido.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-portola-filipino",
+    "name": "Portola Sunburst Filipino Kitchen",
+    "cuisine": "Filipino",
+    "latitude": 37.727,
+    "longitude": -122.406,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 1800,
+    "tags": [
+      "adobo",
+      "comfort",
+      "family"
+    ],
+    "description": "Chicken adobo, lumpia, and ube-halo-halo for dessert.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-visitacion-peruvian",
+    "name": "Visitacion Valley Andes Rotisserie",
+    "cuisine": "Peruvian",
+    "latitude": 37.714,
+    "longitude": -122.41,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 1900,
+    "tags": [
+      "rotisserie",
+      "spicy",
+      "family"
+    ],
+    "description": "Pollo a la brasa with three ají sauces.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-excelsior-taqueria",
+    "name": "Excelsior Eventide Taqueria",
+    "cuisine": "Mexican",
+    "latitude": 37.723,
+    "longitude": -122.431,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1100,
+    "tags": [
+      "burritos",
+      "spicy",
+      "late-night"
+    ],
+    "description": "Mission-style burritos the size of a small comet.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-ingleside-jamaican",
+    "name": "Ingleside Orbit Jerk Shack",
+    "cuisine": "Caribbean",
+    "latitude": 37.723,
+    "longitude": -122.453,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 1700,
+    "tags": [
+      "jerk-chicken",
+      "spicy",
+      "comfort"
+    ],
+    "description": "Smoky jerk chicken with rice and peas and plantains.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-forest-hill-tea",
+    "name": "Forest Hill Moonrise Matcha",
+    "cuisine": "Tea House",
+    "latitude": 37.748,
+    "longitude": -122.463,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 900,
+    "tags": [
+      "matcha",
+      "tea",
+      "quiet"
+    ],
+    "description": "Whisked matcha and mochi in a quiet hillside nook.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-haight-vegan",
+    "name": "Haight Street Aurora Vegan Diner",
+    "cuisine": "Vegetarian",
+    "latitude": 37.77,
+    "longitude": -122.446,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1600,
+    "tags": [
+      "vegan",
+      "burgers",
+      "comfort"
+    ],
+    "description": "Plant-based burgers and seitan wings, open all day.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-japantown-crepes",
+    "name": "Japantown Prism Crepes",
+    "cuisine": "Dessert",
+    "latitude": 37.785,
+    "longitude": -122.431,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 900,
+    "tags": [
+      "crepes",
+      "sweet",
+      "matcha"
+    ],
+    "description": "Harajuku-style crepes stuffed with matcha cream.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-laurel-heights-deli",
+    "name": "Laurel Heights Vector Deli",
+    "cuisine": "Sandwiches",
+    "latitude": 37.786,
+    "longitude": -122.45,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1400,
+    "tags": [
+      "sandwiches",
+      "picnic",
+      "quick"
+    ],
+    "description": "Italian subs and pastrami ryes stacked high.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-marina-sushi",
+    "name": "Marina Polaris Sushi Bar",
+    "cuisine": "Japanese",
+    "latitude": 37.8005,
+    "longitude": -122.433,
+    "rarity": "epic",
+    "discoveryXp": 800,
+    "rewardCents": 50,
+    "estimatedMealCents": 4000,
+    "tags": [
+      "sushi",
+      "seafood",
+      "date-night"
+    ],
+    "description": "Omakase-lite sushi with torched salmon nigiri.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-ggp-picnic",
+    "name": "Golden Gate Park Meadow Kiosk",
+    "cuisine": "American",
+    "latitude": 37.771,
+    "longitude": -122.468,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1100,
+    "tags": [
+      "picnic",
+      "outdoors",
+      "family"
+    ],
+    "description": "Hot dogs and lemonade beside the concourse fountains.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-hunters-point-soul",
+    "name": "Hunters Point Starboard Soul Kitchen",
+    "cuisine": "Southern",
+    "latitude": 37.728,
+    "longitude": -122.377,
+    "rarity": "rare",
+    "discoveryXp": 400,
+    "rewardCents": 50,
+    "estimatedMealCents": 1900,
+    "tags": [
+      "fried-fish",
+      "comfort",
+      "waterfront"
+    ],
+    "description": "Cornmeal-fried catfish and collards near the shipyard.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-lakeshore-greek",
+    "name": "Lakeshore Halo Greek Grill",
+    "cuisine": "Greek",
+    "latitude": 37.724,
+    "longitude": -122.479,
+    "rarity": "common",
+    "discoveryXp": 150,
+    "rewardCents": 50,
+    "estimatedMealCents": 1700,
+    "tags": [
+      "gyros",
+      "mezze",
+      "quick"
+    ],
+    "description": "Gyros, spanakopita, and lemony roast potatoes.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  },
+  {
+    "id": "demo-diamond-heights-pie",
+    "name": "Diamond Heights Summit Pie Shop",
+    "cuisine": "Dessert",
+    "latitude": 37.742,
+    "longitude": -122.44,
+    "rarity": "legendary",
+    "discoveryXp": 1200,
+    "rewardCents": 50,
+    "estimatedMealCents": 1200,
+    "tags": [
+      "pie",
+      "sweet",
+      "coffee"
+    ],
+    "description": "Legendary sour cherry pie at the top of the hill.",
+    "imageUrl": null,
+    "availability": "open",
+    "isSynthetic": true
+  }
 ]

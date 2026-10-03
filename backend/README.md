@@ -33,9 +33,9 @@ Core local functionality requires no purchased third-party key. It needs:
 
 The complete provider-assisted adventure experience uses:
 
-- ZooWork Instinct: set `ADVENTURE_PROVIDER=zoowork` and provide either `ZOODATA_API_KEY` for `https://api.zoodata.ai/v1/systemone` (paid) or `ZOOWORK_API_KEY` for the free-preview endpoint. `ZOOWORK_MODEL` defaults to `instinct`.
+- ZooWork: set `ADVENTURE_PROVIDER=zoowork` and provide either `ZOODATA_API_KEY` (`sk-…`) for `https://api.zoodata.ai/v1/systemone`, where `ZOOWORK_MODEL` defaults to `instinct`, or a ZooWork Platform key `ZOOWORK_API_KEY` (`zwp_…`). A Platform key uses the Managed Agents API: the backend reuses one labelled `bitequest-adventure-planner` agent (created on first use, all tools denied) and opens one session per adventure. `ZOOWORK_AGENT_MODEL` picks its model (default `litellm/gpt-5.6-luna`).
 - Novita alternative: set `ADVENTURE_PROVIDER=novita`, `NOVITA_API_KEY`, and `NOVITA_MODEL`. This is an alternative to ZooWork, not an additional planner call.
-- Moss semantic ranking: `MOSS_PROJECT_ID`, `MOSS_PROJECT_KEY`, and `MOSS_INDEX_NAME`. The index must already contain documents whose IDs match restaurant IDs. If it is unavailable, catalog ranking continues.
+- Moss semantic ranking: `MOSS_PROJECT_ID`, `MOSS_PROJECT_KEY`, and `MOSS_INDEX_NAME`. The index must contain documents whose IDs match restaurant IDs; build or rebuild it from the database with `npm run moss:seed`. Moss is only consulted when the adventure request includes `preferences`. If it is unavailable, catalog ranking continues.
 - Tavily enrichment: `TAVILY_API_KEY`. It is optional and is skipped for the bundled synthetic venues.
 
 Set `ADVENTURE_PROVIDER=deterministic` to run adventures without any AI key. Provider errors and malformed output fall back to this mode.

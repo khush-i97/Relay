@@ -1,6 +1,8 @@
 import {
   Beef,
+  Coffee,
   Croissant,
+  Egg,
   Fish,
   Flame,
   Leaf,
@@ -31,6 +33,12 @@ const ICONS: Record<string, LucideIcon> = {
   Vietnamese: Soup,
   Steakhouse: Beef,
   Vegetarian: Salad,
+  "Tea House": Coffee,
+  Californian: Salad,
+  Barbecue: Flame,
+  Sandwiches: Sandwich,
+  Brunch: Egg,
+  Salvadoran: Wheat,
 };
 
 export function cuisineIcon(cuisine: string): LucideIcon {

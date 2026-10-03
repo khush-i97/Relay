@@ -1,7 +1,7 @@
 import { deterministicProvider } from "./deterministic";
 import { NovitaProvider } from "./novita";
 import type { PlanningProvider } from "./types";
-import { ZooWorkProvider } from "./zoowork";
+import { ZooWorkAgentProvider, ZooWorkProvider } from "./zoowork";
 
 export function configuredPlanningProvider(): PlanningProvider {
   const selected = process.env.ADVENTURE_PROVIDER ?? "deterministic";
@@ -16,7 +16,7 @@ export function configuredPlanningProvider(): PlanningProvider {
     return paidKey
       ? new ZooWorkProvider(paidKey, fetch, "https://api.zoodata.ai/v1/systemone")
       : previewKey
-        ? new ZooWorkProvider(previewKey)
+        ? new ZooWorkAgentProvider(previewKey)
         : unavailable("zoowork");
   }
   return deterministicProvider;

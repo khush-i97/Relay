@@ -200,6 +200,20 @@ export function AdventureSheet({ open, origin, onOpenChange, onPlan, onStart }: 
         <div className="mt-4 space-y-3">
           <p className="text-sm font-semibold">Approximate walking route</p>
           <p className="text-xs text-muted">Not turn-by-turn directions. Totals come from the planner.</p>
+          {plan.engine ? (
+            <div className="rounded-2xl border border-dashed border-line p-3 text-xs" data-testid="adventure-engine">
+              <p>
+                <span className="font-semibold">Stops picked by:</span>{" "}
+                {plan.engine.planner === "zoowork" ? "ZooWork AI" : plan.engine.planner === "deterministic" ? "Built-in planner" : plan.engine.planner}
+                {plan.engine.mode === "fallback" ? " (fallback)" : null}
+              </p>
+              <p className="mt-1">
+                <span className="font-semibold">Candidates ranked by:</span>{" "}
+                {plan.engine.rankingSource === "moss" ? "Moss semantic search" : "Catalog order"}
+              </p>
+              <p className="mt-1 text-muted">{plan.engine.mode === "fallback" ? plan.engine.explanation : plan.engine.ranking}</p>
+            </div>
+          ) : null}
           <ol className="space-y-2">
             {plan.stops.map((stop) => (
               <li key={stop.restaurantId} className="rounded-2xl border border-line p-3">

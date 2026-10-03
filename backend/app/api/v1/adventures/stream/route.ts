@@ -3,6 +3,7 @@ import { encodeSse } from "../../../../../lib/server/adventure/sse";
 import { sfLocalDate } from "../../../../../lib/server/domain/time";
 import { ApiProblem } from "../../../../../lib/server/errors";
 import { routeError } from "../../../../../lib/server/http";
+import { logEvent } from "../../../../../lib/server/log";
 import { validateWriteOrigin } from "../../../../../lib/server/origin";
 import { configuredPlanningProvider } from "../../../../../lib/server/providers";
 import { MossRanker } from "../../../../../lib/server/providers/moss";
@@ -13,7 +14,7 @@ import { mapRestaurant } from "../../../../../lib/server/restaurants";
 import { requireSession } from "../../../../../lib/server/session";
 import { serverDb } from "../../../../../lib/server/supabase";
 import { adventureRequestSchema } from "../../../../../lib/server/validation";
-import type { AdventureStreamEvent } from "../../../../../shared/contracts";
+import type { AdventurePlan, AdventureStreamEvent } from "../../../../../shared/contracts";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -49,23 +50,46 @@ export async function POST(request: Request): Promise<Response> {
           });
           send({ type: "progress", stage: "catalog_loaded", message: "Catalog and reward state loaded" });
 
-          if (process.env.MOSS_PROJECT_ID && process.env.MOSS_PROJECT_KEY) {
-            candidates = await withProviderTimeout(
-              () => new MossRanker(process.env.MOSS_PROJECT_ID!, process.env.MOSS_PROJECT_KEY!).rank(candidates, parsed.data.preferences),
-              5_000,
-              planningSignal,
-            ).catch(() => candidates);
+          const started = performance.now();
+          let ranking: NonNullable<AdventurePlan["ranking"]> = { source: "catalog", reason: "Moss is not configured", topRestaurantIds: [] };
+          if (!process.env.MOSS_PROJECT_ID || !process.env.MOSS_PROJECT_KEY) {
+            // keep catalog order
+          } else if (parsed.data.preferences.length === 0) {
+            ranking = { ...ranking, reason: "No preferences given, so Moss was skipped" };
+          } else {
+            try {
+              candidates = await withProviderTimeout(
+                () => new MossRanker(process.env.MOSS_PROJECT_ID!, process.env.MOSS_PROJECT_KEY!).rank(candidates, parsed.data.preferences),
+                5_000,
+                planningSignal,
+              );
+              ranking = { source: "moss", reason: `Ranked by Moss for "${parsed.data.preferences.join(", ")}"`, topRestaurantIds: candidates.slice(0, 5).map((candidate) => candidate.id) };
+            } catch (error) {
+              ranking = { ...ranking, reason: `Moss failed: ${error instanceof Error ? error.message : String(error)}` };
+            }
           }
           send({ type: "progress", stage: "candidates_ranked", message: "Candidates ranked" });
 
           const sources = process.env.TAVILY_API_KEY
             ? await withProviderTimeout((signal) => new TavilyEnricher(process.env.TAVILY_API_KEY!).enrich(candidates, signal), 5_000, planningSignal).catch(() => [])
             : [];
-          const plan = await planAdventure(parsed.data, { candidates, currentDailyCredits, provider: configuredPlanningProvider(), sources }, planningSignal);
+          const plan = { ...(await planAdventure(parsed.data, { candidates, currentDailyCredits, provider: configuredPlanningProvider(), sources }, planningSignal)), ranking };
+          logEvent({
+            event: "adventure.planned",
+            preferences: parsed.data.preferences,
+            ranking: ranking.source,
+            rankingReason: ranking.reason,
+            mossTop: ranking.topRestaurantIds,
+            planner: plan.provider,
+            mode: plan.mode,
+            stops: plan.stops.map((stop) => stop.restaurantId),
+            latencyMs: Math.round(performance.now() - started),
+          });
           send({ type: "progress", stage: "plan_validated", message: "Plan validated against catalog limits" });
           send({ type: "complete", plan });
           terminalSent = true;
         } catch (error) {
+          logEvent({ event: "adventure.failed", error: error instanceof Error ? error.message : String(error) });
           if (!terminalSent && !request.signal.aborted) {
             send({ type: "error", error: { code: "SERVICE_UNAVAILABLE", message: "Adventure planning is temporarily unavailable", retryable: true } });
           }

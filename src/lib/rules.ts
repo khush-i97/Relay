@@ -6,7 +6,7 @@ export const LOCATION_MAX_AGE_MS = 60_000;
 export const LOCATION_MAX_ACCURACY_M = 100;
 export const LOCATION_MAX_DISTANCE_M = 100;
 export const XP_PER_LEVEL = 1000;
-export const NEARBY_RADIUS_M = 3000;
+export const NEARBY_RADIUS_M = 10_000;
 
 export const SF_CENTER = { latitude: 37.791, longitude: -122.4055 };
 

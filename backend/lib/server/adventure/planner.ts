@@ -1,5 +1,6 @@
 import type { AdventurePlan, AdventureRequest, AdventureStop, Point } from "../../../shared/contracts";
 import { haversineMeters } from "../domain/geo";
+import { logEvent } from "../log";
 import { deterministicProvider } from "../providers/deterministic";
 import type { PlanningCandidate, PlanningProvider, RankedCandidate } from "../providers/types";
 import { validateProviderRanking } from "./validate-plan";
@@ -29,6 +30,7 @@ export async function planAdventure(input: Required<AdventureRequest>, context: 
     ranking = validateProviderRanking(await context.provider.rank(eligible, input, signal), eligible);
   } catch (error) {
     if (signal.aborted) throw error;
+    logEvent({ event: "adventure.provider_fallback", provider, error: error instanceof Error ? error.message : String(error) });
     ranking = await deterministicProvider.rank(eligible, input, signal);
     provider = "deterministic";
     mode = "fallback";

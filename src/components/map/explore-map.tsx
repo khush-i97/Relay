@@ -77,7 +77,7 @@ function dressCity(map: MapLibreMap) {
   if (map.getLayer("background")) map.setPaintProperty("background", "background-color", LAND);
   for (const layer of map.getStyle().layers ?? []) {
     const id = layer.id;
-    if (id === "water" || id.startsWith("waterway")) {
+    if ((id === "water" || id.startsWith("waterway")) && (layer.type === "line" || layer.type === "fill")) {
       const prop = layer.type === "line" ? "line-color" : "fill-color";
       map.setPaintProperty(id, prop, WATER);
     } else if (id === "park" || id === "landcover_grass" || id === "landuse_pitch") {

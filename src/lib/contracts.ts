@@ -159,6 +159,14 @@ export type AdventurePlan = {
   totalWalkMinutes: number;
   stops: AdventureStop[];
   route: [number, number][];
+  /** Live mode only: which services ranked candidates and picked the stops. */
+  engine?: {
+    planner: string;
+    mode: "live" | "fallback";
+    explanation: string;
+    ranking: string;
+    rankingSource: "moss" | "catalog";
+  };
 };
 
 export type StreamEvent =

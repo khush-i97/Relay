@@ -5,8 +5,8 @@ import { SF_DEMO_CENTER } from "../../shared/contracts";
 
 describe("synthetic restaurant fixtures", () => {
   it("contains a stable, valid SF demo catalog", () => {
-    expect(fixtures).toHaveLength(18);
-    expect(new Set(fixtures.map((restaurant) => restaurant.id)).size).toBe(18);
+    expect(fixtures).toHaveLength(80);
+    expect(new Set(fixtures.map((restaurant) => restaurant.id)).size).toBe(80);
     expect(fixtures.map((restaurant) => restaurant.id)).toEqual(
       expect.arrayContaining(["demo-mission-taco", "demo-sunset-ramen", "demo-embarcadero-bites"]),
     );

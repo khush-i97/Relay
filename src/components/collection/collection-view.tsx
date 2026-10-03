@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { CuisineIcon } from "@/components/restaurants/cuisine";
 import { RarityBadge } from "@/components/restaurants/rarity";
 import { useCollection } from "@/hooks/queries";
-import { CUISINES } from "@/lib/fixtures";
+import { cuisineOptions } from "@/lib/cuisines";
 import { formatWhen, formatXp } from "@/lib/format";
 import { SF_CENTER } from "@/lib/rules";
 import { cn } from "@/lib/utils";
@@ -27,7 +27,7 @@ export function CollectionView() {
         <FilterChip active={cuisine === null} onClick={() => setCuisine(null)}>
           All
         </FilterChip>
-        {CUISINES.map((item) => (
+        {cuisineOptions(collection.data?.restaurants ?? [], cuisine).map((item) => (
           <FilterChip key={item} active={cuisine === item} onClick={() => setCuisine(item)}>
             {item}
           </FilterChip>

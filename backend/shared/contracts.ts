@@ -157,6 +157,12 @@ export interface AdventurePlan {
   routeKind: "estimate";
   totals: AdventureTotals;
   sources: { title: string; url: string }[];
+  /** How candidates were ordered before planning; optional and additive. */
+  ranking?: {
+    source: "moss" | "catalog";
+    reason: string;
+    topRestaurantIds: string[];
+  };
 }
 
 export type AdventureProgressStage = "catalog_loaded" | "candidates_ranked" | "plan_validated";

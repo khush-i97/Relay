@@ -11,7 +11,7 @@ const pointSchema = z.strictObject({ latitude, longitude });
 export const nearbyQuerySchema = z.strictObject({
   latitude,
   longitude,
-  radiusMeters: z.coerce.number().int().min(100).max(5000),
+  radiusMeters: z.coerce.number().int().min(100).max(10_000),
 });
 
 export const visitRequestSchema = z.strictObject({

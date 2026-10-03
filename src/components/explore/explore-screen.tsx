@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { RedeemSheet } from "@/components/wallet/redeem-sheet";
 import { useApplySummary, useCatalog, useNearby, useRefreshLedger } from "@/hooks/queries";
 import type { VisitResponse } from "@/lib/contracts";
-import { CUISINES } from "@/lib/fixtures";
+import { cuisineOptions } from "@/lib/cuisines";
 import { haversine } from "@/lib/geo";
 import { captureBrowserLocation } from "@/lib/location";
 import { formatDistance } from "@/lib/format";
@@ -185,7 +185,7 @@ export function ExploreScreen() {
             <FilterChip active={cuisine === null} onClick={() => setCuisine(null)}>
               All
             </FilterChip>
-            {CUISINES.map((item) => (
+            {cuisineOptions(restaurants, cuisine).map((item) => (
               <FilterChip key={item} active={cuisine === item} onClick={() => setCuisine(item)}>
                 {item}
               </FilterChip>

@@ -13,12 +13,15 @@
     "db:start": "supabase start",
     "db:reset": "supabase db reset",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint . --max-warnings=0"
+    "lint": "eslint . --max-warnings=0",
+    "moss:seed": "node --env-file-if-exists=.env.local scripts/seed-moss.mjs",
+    "seed:build": "node scripts/build-seed.mjs"
   },
   "dependencies": {
     "@moss-js/moss": "1.15.0",
     "@supabase/supabase-js": "2.117.2",
     "@tavily/core": "0.7.13",
+    "@zoowork-ai/sdk": "^0.11.1",
     "next": "16.3.8",
     "react": "19.3.0",
     "react-dom": "19.3.0",
