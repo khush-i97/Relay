@@ -9,6 +9,7 @@
     "start": "next start",
     "test": "vitest run",
     "test:integration": "node scripts/with-supabase-env.mjs",
+    "check:env": "node --env-file-if-exists=.env.local scripts/check-env.mjs",
     "db:start": "supabase start",
     "db:reset": "supabase db reset",
     "typecheck": "tsc --noEmit",
