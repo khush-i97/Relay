@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "BiteQuest",
+      "hasCanvas": false,
+      "bodyTextLen": 239,
+      "bodyTextHash": "e74fcde573f0f4d58b9ed6e6110169c28ac6c61dbc7d9443aec9b58be180df13",
+      "bodyTextPrefix": "Explore Collection Wallet BiteQuest Loading your trail SF demo ·",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "BiteQuest",
+      "hasCanvas": false,
+      "bodyTextLen": 243,
+      "bodyTextHash": "3197edc2f443eb0472fb25b0333c6ff6993ae11e250150f67c428a9d4fb61548",
+      "bodyTextPrefix": "BiteQuest Lv 1 $0.00 0 / 1000 XP SF demo · not verified GPS All ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

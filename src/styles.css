@@ -1,0 +1,233 @@
+@import "tailwindcss";
+@import "@fontsource/outfit/400.css";
+@import "@fontsource/outfit/500.css";
+@import "@fontsource/outfit/600.css";
+@import "@fontsource/fraunces/500.css";
+@import "@fontsource/fraunces/600.css";
+@import "@fontsource/fraunces/600-italic.css";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --color-ink: #1c1410;
+  --color-paper: #f6f1e8;
+  --color-paper-2: #efe6d8;
+  --color-line: #e3d6c6;
+  --color-muted: #5e564f;
+  --color-chili: #d4533a;
+  --color-chili-deep: #9e2a22;
+  --color-olive: #2f6b4f;
+  --color-gold: #e2b657;
+  --color-gold-deep: #8a5e16;
+  --color-map: #e7efe8;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-chili-deep);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .shadow-panel {
+    box-shadow: 0 16px 40px rgb(28 20 16 / 0.14);
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .chip-row {
+    scrollbar-width: none;
+  }
+
+  .chip-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .venue-panel {
+    position: absolute;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    left: 0;
+    right: 0;
+    bottom: calc(4.75rem + env(safe-area-inset-bottom));
+    max-height: min(70dvh, calc(100dvh - 9rem - env(safe-area-inset-bottom)));
+    border-top: 1px solid var(--color-line);
+    border-radius: 1.5rem 1.5rem 0 0;
+    box-shadow: 0 16px 40px rgb(28 20 16 / 0.14);
+  }
+
+  .map-tools {
+    position: absolute;
+    z-index: 20;
+    right: 0.75rem;
+    top: 46%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .explore-map .maplibregl-ctrl-bottom-left {
+    bottom: calc(5rem + env(safe-area-inset-bottom));
+  }
+
+  .explore-map .maplibregl-ctrl-attrib {
+    background: rgb(246 241 232 / 0.9);
+    color: var(--color-muted);
+    font-size: 0.75rem;
+  }
+
+  .search-area-chip {
+    position: absolute;
+    z-index: 20;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(8.25rem + env(safe-area-inset-top));
+  }
+
+  .adventure-fab {
+    position: absolute;
+    z-index: 30;
+    right: 1rem;
+    bottom: calc(5.15rem + env(safe-area-inset-bottom));
+  }
+
+  .explore-map .maplibregl-ctrl-bottom-left {
+    bottom: calc(4.75rem + env(safe-area-inset-bottom));
+  }
+
+  .explore-map .maplibregl-ctrl-attrib {
+    background: rgb(246 241 232 / 0.92);
+    color: var(--color-muted);
+    font-size: 11px;
+  }
+
+  .explore-map .maplibregl-ctrl-attrib a {
+    color: var(--color-muted);
+  }
+
+  .route-chip {
+    position: absolute;
+    z-index: 20;
+    left: 0.75rem;
+    bottom: calc(5.15rem + env(safe-area-inset-bottom));
+    max-width: calc(100% - 8.5rem);
+  }
+
+  .walk-banner {
+    position: absolute;
+    z-index: 32;
+    left: 0.75rem;
+    right: 4.75rem;
+    bottom: calc(6.75rem + env(safe-area-inset-bottom));
+  }
+
+  .walker {
+    width: 2.75rem;
+    height: 2.75rem;
+    pointer-events: none;
+  }
+
+  .walker svg {
+    display: block;
+    width: 2.75rem;
+    height: 2.75rem;
+    filter: drop-shadow(0 3px 3px rgb(28 20 16 / 0.35));
+  }
+}
+
+@media (min-width: 768px) {
+  .venue-panel {
+    left: 1rem;
+    right: auto;
+    width: 26rem;
+    max-width: calc(100% - 2rem);
+    bottom: 5.5rem;
+    max-height: calc(100dvh - 8rem);
+    border: 1px solid var(--color-line);
+    border-radius: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .venue-panel {
+    left: auto;
+    right: 1rem;
+    width: 23.75rem;
+    top: 7rem;
+    bottom: 1rem;
+    max-height: none;
+  }
+
+  .adventure-fab {
+    bottom: 1.5rem;
+  }
+
+  .map-tools {
+    top: auto;
+    bottom: 5.5rem;
+  }
+
+  .explore-map .maplibregl-ctrl-bottom-left {
+    bottom: 0.75rem;
+  }
+
+  .route-chip {
+    bottom: 1.5rem;
+  }
+
+  .walk-banner {
+    right: auto;
+    width: 26rem;
+    bottom: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
