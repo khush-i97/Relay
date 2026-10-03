@@ -142,6 +142,11 @@ function authPopupPlugin(): Plugin {
   };
 }
 
+/** Where `/api/v1` requests go: the BiteQuest backend (`backend/`), from RELAY_BACKEND_URL. */
+function relayBackendUrl(mode: string): string {
+  return (loadEnv(mode, process.cwd(), "").RELAY_BACKEND_URL || "").replace(/\/+$/, "");
+}
+
 // `0.0.0.0:8080` is the live-preview contract — don't change host/port.
 // The dev server starts once `src/router.tsx` and `src/routes/` exist — see
 // AGENTS.md § "First scaffold".
@@ -152,7 +157,7 @@ export default defineConfig(({ command, isPreview, mode }) => ({
     strictPort: true,
     // Dev-only: forward live-mode API calls to the BiteQuest backend (`backend/`).
     proxy: {
-      "/api/v1": loadEnv(mode, process.cwd(), "").RELAY_BACKEND_URL || "http://localhost:3000",
+      "/api/v1": relayBackendUrl(mode) || "http://localhost:3000",
     },
   },
   preview: {
@@ -179,6 +184,10 @@ export default defineConfig(({ command, isPreview, mode }) => ({
             // manifest + head-tag middleware). Nitro v3 defaults serverDir to
             // false, so removing this silently unwires /?install=1 on deploys.
             serverDir: "./server",
+            // Production: the server function forwards API calls so the session cookie stays first-party.
+            routeRules: relayBackendUrl(mode)
+              ? { "/api/v1/**": { proxy: `${relayBackendUrl(mode)}/api/v1/**` } }
+              : {},
           }),
         ]
       : []),
