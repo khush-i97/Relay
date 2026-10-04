@@ -1,0 +1,5 @@
+# Never upload local env files; production values live in Vercel project settings.
+.env
+.env.*
+!.env.example
+.next

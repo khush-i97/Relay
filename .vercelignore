@@ -1,0 +1,7 @@
+# Never upload local env files; production values live in Vercel project settings.
+.env
+.env.*
+# Deployed separately as the relay-api project.
+backend
+screenshots
+attachments

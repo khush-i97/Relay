@@ -1,4 +1,12 @@
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+
 import type { PlanningCandidate } from "./types";
+
+// Serverless hosts (Vercel) only allow writes under the temp dir; Moss caches its embedding model on disk.
+if (process.env.VERCEL && !process.env.MOSS_MODEL_CACHE_DIR) {
+  process.env.MOSS_MODEL_CACHE_DIR = join(tmpdir(), "moss-models");
+}
 
 type MossModule = typeof import("@moss-js/moss");
 

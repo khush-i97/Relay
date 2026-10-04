@@ -60,7 +60,7 @@ export async function POST(request: Request): Promise<Response> {
             try {
               candidates = await withProviderTimeout(
                 () => new MossRanker(process.env.MOSS_PROJECT_ID!, process.env.MOSS_PROJECT_KEY!).rank(candidates, parsed.data.preferences),
-                5_000,
+                12_000, // a cold serverless instance downloads the embedding model first
                 planningSignal,
               );
               ranking = { source: "moss", reason: `Ranked by Moss for "${parsed.data.preferences.join(", ")}"`, topRestaurantIds: candidates.slice(0, 5).map((candidate) => candidate.id) };
